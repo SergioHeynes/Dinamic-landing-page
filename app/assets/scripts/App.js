@@ -29,5 +29,31 @@ function addZeros(n) {
     return (parseInt(n, 10) < 10 ? '0' : '') + n;
 }
 
+// Set Background and Greeting
+function setBgGreet(){
+    let today = new Date(),
+    hour = today.getHours();
+
+    // Morning
+    if (hour < 12) {
+        document.body.style.backgroundImage = "url('/assets//images/morning_1920.jpg')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        greeting.textContent = 'Good Morning';
+    } else if (hour < 18) {
+        // Afternoon
+        document.body.style.backgroundImage = "url('/assets//images/afternoon2_1920.jpg')";
+        greeting.textContent = 'Good Afternoon';
+    } else {
+        // Night
+        document.body.style.backgroundImage = "url('/assets//images/night_1920.jpg')";
+        greeting.textContent = 'Good Night';
+        document.body.style.color = "white";
+    }
+}
+
 // Run
 showTime();
+setBgGreet();
+
+
