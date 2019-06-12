@@ -8,12 +8,21 @@ html {
 }
 
 body {
-  background-color: $colorPrimary;
-  color: #FFF;
+  color: black;
   font-family: $fontBody;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
 }
 
-img {
-  width: 100%;
-  height: auto;
+h1 {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
 }

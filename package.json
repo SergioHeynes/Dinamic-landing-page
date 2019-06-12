@@ -9,7 +9,10 @@
   "author": "Sergio Heynes",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.6.0",
+    "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.5",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
@@ -19,7 +22,8 @@
     "gulp-rev": "^9.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "gulp-usemin": "^0.3.29"
+    "gulp-usemin": "^0.3.29",
+    "webpack": "^4.33.0"
   },
   "dependencies": {
     "normalize-scss": "^7.0.1"

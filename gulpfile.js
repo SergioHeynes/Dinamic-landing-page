@@ -9,6 +9,7 @@ const del = require('del');
 const rev = require('gulp-rev');
 const cssnano = require('gulp-cssnano'); 
 const uglify = require('gulp-uglify');
+const webpack = require('webpack');
 
 
 // File paths
@@ -38,8 +39,15 @@ function styles(done) {
 
 // Scripts
 function scripts(done) {
-    console.log('Starting scripts task');
-    done();
+  console.log('Starting scripts task');
+  webpack(require('./webpack.config.js'), function(err, stats){
+    if(err){
+        console.log(err.toString());
+    }
+      console.log('Webpack done!');
+      console.log(stats.toString());
+  });
+  done();
 }
 
 
